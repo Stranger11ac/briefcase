@@ -179,7 +179,7 @@ input[type="time"] {
     text-align: right;
 }
 
-*[disabled=true]{
+*[disabled="true"] {
     cursor: default !important;
 }
 
@@ -2975,7 +2975,7 @@ hr.decoration {
     transform: scale(2);
 }
 
-.object_disabled{
+.object_disabled {
     opacity: 0.2;
 }
 
@@ -3015,6 +3015,15 @@ hr.decoration {
 }
 
 /* Visible solo en... */
+.display_s {
+    display: unset !important;
+}
+.display_m {
+    display: unset !important;
+}
+.display_l {
+    display: unset !important;
+}
 .display_sm {
     display: unset !important;
 }
@@ -3025,6 +3034,21 @@ hr.decoration {
     display: none !important;
 }
 
+@media (min-width: 320px){
+    .display_s {
+        display: none !important;
+    }
+}
+@media (min-width: 375px){
+    .display_m {
+        display: none !important;
+    }
+}
+@media (min-width: 425px){
+    .display_l {
+        display: none !important;
+    }
+}
 @media (min-width: 768px) {
     .display_sm {
         display: none !important;

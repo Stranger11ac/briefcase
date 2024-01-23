@@ -299,7 +299,7 @@ body.light-theme footer .footer_settings{
 
 footer.menu_section.menu_open .footer_settings {
     height: 100%;
-    padding: 20px 5% 60px 5%;
+    padding: 20px 3% 60px 3%;
     transform: scale(1);
     transform-origin: top center;
 }
@@ -315,11 +315,11 @@ footer .footer_settings .setting:last-child {
 }
 
 footer .footer_settings .setting.setting_system{
-    padding: 40px;
+    padding-right: 40px;
 }
 footer .footer_settings .setting.setting_system input{
-    margin-left: 30px;
-    transform: scale(3);
+    /* margin-left: 30px; */
+    transform: scale(4);
 }
 
 /* Botones colores distintivos */
@@ -327,7 +327,7 @@ footer .footer_settings .setting.setting_system input{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 10px;
     min-height: 20px;
     margin-top: 10px;

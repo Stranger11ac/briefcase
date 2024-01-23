@@ -96,20 +96,20 @@
                 <div class="setting">
                     <p>Cambiar Colores:</p>
                     <div class="buttons_colors">
-                        <button class="btn-color purple" data-color="body_elements-purplegd"></button>
-                        <button class="btn-color blue active" data-color="body_elements-bluegd"></button>
-                        <button class="btn-color green" data-color="body_elements-greengd"></button>
-                        <button class="btn-color yellow" data-color="body_elements-yellowgd"></button>
-                        <button class="btn-color red" data-color="body_elements-redgd"></button>
-                        <button class="btn-color rainbow" data-color="body_elements-rainbow"></button>
-                        <button class="btn-color cyangd" data-color="body_elements-cyangd"></button>
+                        <button title="Purple" class="btn-color purple" data-color="body_elements-purplegd"></button>
+                        <button title="Blue" class="btn-color blue active" data-color="body_elements-bluegd"></button>
+                        <button title="Green" class="btn-color green" data-color="body_elements-greengd"></button>
+                        <button title="Yellow" class="btn-color yellow" data-color="body_elements-yellowgd"></button>
+                        <button title="Red" class="btn-color red" data-color="body_elements-redgd"></button>
+                        <button title="Rainbow" class="btn-color rainbow" data-color="body_elements-rainbow"></button>
+                        <button title="Cyan" class="btn-color cyangd" data-color="body_elements-cyangd"></button>
                     </div>
                 </div>
-                <div class="setting setting_system flex_group end">
-                    <label for="systemTheme">
-                        Utilizar tema del sistema
-                        <input type="checkbox" name="systemTheme" id="systemTheme" />
-                    </label>
+                <div class="setting setting_system flex_group between">
+                        <label for="systemTheme">
+                            Utilizar tema del sistema
+                        </label>
+                        <input type="checkbox" name="systemTheme" id="systemTheme">
                 </div>
                 <div class="setting flex_group between">
                     <p class="switch_title">Tema: <span id="switch_text">Oscuro</span></p>
@@ -120,10 +120,8 @@
                     </div>
                 </div>
                 <div class="setting flex_group between">
-                    <p>Cookies: <span class="cookies_size"></span></p>
-                    <button class="btn_2 btn_click" id="deleteCookie">
-                        Eliminar <i class="fa-solid fa-trash-can"></i>
-                    </button>
+                    <p>Cookies: <br class="display_l"/><span class="cookies_size"></span></p>
+                    <button class="btn_2 btn_click" id="deleteCookie">Eliminar <i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </section>
 

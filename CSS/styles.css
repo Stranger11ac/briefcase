@@ -4,6 +4,7 @@ body {
 }
 
 body.light-theme{
+    transition-delay: 0s;
     background: var(--white);
     color: black;
 }
@@ -44,10 +45,12 @@ main {
 }
 
 body.light-theme main{
+    transition-delay: 0s;
     background: var(--secondary);
 }
 
 body.light-theme hr.tittle{
+    transition-delay: 0s;
     background: var(--g2);
 }
 
@@ -64,6 +67,7 @@ section .card {
 }
 
 body.light-theme .card{
+    transition-delay: 0s;
     background-color: var(--whiteA9);
     background: var(--whiteA9);
 }
@@ -83,7 +87,8 @@ body.light-theme .card{
     transition: var(--transitionEase);
 }
 
-.card.active .card_info .card_info-title {
+.card:hover .card_info .card_info-title {
+/* .card.active .card_info .card_info-title { */
     height: 25%;
 }
 
@@ -92,15 +97,17 @@ body.light-theme .card{
     padding: 10px 20px;
     height: 75%;
     word-wrap: break-word;
-    transition-delay: 0;
+    transition-delay: 0s;
     position: absolute;
     bottom: 0;
+    /* text-align: center; */
     text-shadow: 0 0 5px var(--darkA7);
     clip-path: circle(0 at 50% 100%);
     transition: var(--transitionEase);
 }
 
 body.light-theme .card .card_info .card_info-cont {
+    transition-delay: 0s;
     background: linear-gradient(0deg, var(--whiteA7) 30%, transparent 95%);
     text-shadow: none;
 }
@@ -144,27 +151,30 @@ body.light-theme .card .card_info .card_info-cont {
     background: var(--bluegd);
     clip-path: ellipse(80% 0% at 50% 100%);
     transition: clip-path 0.3s ease;
-    transition-delay: 0;
+    transition-delay: 0s;
 }
 
 .card .card_info .card_info-cont .cont_btn i {
     transform: translateX(-10px);
     opacity: 0;
     transition: var(--transitionCubic);
-    transition-delay: 0;
+    transition-delay: 0s;
 }
 
-.card.active .card_info .card_info-cont {
+.card:hover .card_info .card_info-cont {
+/* .card.active .card_info .card_info-cont { */
     transition-delay: 0.5s;
     clip-path: circle(200% at 50% 100%);
 }
 
-.card.active .card_info .card_info-cont .cont_btn {
+.card:hover .card_info .card_info-cont .cont_btn {
+/* .card.active .card_info .card_info-cont .cont_btn { */
     clip-path: ellipse(80% 90% at 50% 100%);
     transition-delay: 0.9s;
 }
 
-.card.active .card_info .card_info-cont .cont_btn i {
+.card:hover .card_info .card_info-cont .cont_btn i {
+/* .card.active .card_info .card_info-cont .cont_btn i { */
     transform: translateX(0px);
     opacity: 1;
     transition-delay: 1.2s;
@@ -187,7 +197,8 @@ body.light-theme .card .card_info .card_info-cont {
     position: absolute;
 }
 
-.card.active .card_info-img {
+.card:hover .card_info-img {
+/* .card.active .card_info-img { */
     filter: blur(3px);
     transition-delay: 0.4s;
 }
@@ -197,6 +208,7 @@ body.light-theme .card .card_info .card_info-cont {
 }
 
 body.light-theme ._3d_imgs{
+    transition-delay: 0s;
     filter: invert(0);
 }
 
@@ -207,6 +219,7 @@ footer .footer_cont {
     /* max-width: 1000px; */
     margin-bottom: 40px;
     line-height: 26px;
+    text-align: justify;
 }
 
 footer .footer_nav {
@@ -219,6 +232,7 @@ footer .footer_nav {
 }
 
 body.light-theme footer .footer_nav{
+    transition-delay: 0s;
     background-color: var(--secondary);
     background: var(--secondary);
 }
@@ -232,12 +246,13 @@ footer .footer_nav .nav_btn {
     height: 80px;
     color: white;
     font-size: 3rem;
-    cursor: pointer;
     text-align: center;
+    overflow: hidden;
     transition: var(--transitionEase);
 }
 
 body.light-theme footer .footer_nav .nav_btn {
+    transition-delay: 0s;
     background-color: white;
     background: white;
     color: black;
@@ -256,6 +271,13 @@ footer .footer_nav .btn_openmenu::before {
 
 footer .footer_nav .btn_openmenu:hover:before{
     transform: scale(1.5);
+    color: white;
+}
+
+footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--bluegd);
+    background: var(--bluegd);
+    color: white;
 }
 
 footer.menu_section.menu_open .footer_nav .btn_openmenu::before {
@@ -277,6 +299,11 @@ footer .footer_nav .nav_btn:hover span {
     transform: scale(1.5);
 }
 
+body.light-theme footer .footer_nav .nav_btn:hover span {
+    color: white;
+    transform: scale(1.5);
+}
+
 footer .footer_nav .nav_btn:hover {
     background-color: var(--indigo);
     background: var(--bluegd);
@@ -293,6 +320,7 @@ footer .footer_settings {
 }
 
 body.light-theme footer .footer_settings{
+    transition-delay: 0s;
     background-color: var(--secondary);
     background: var(--secondary);
 }
@@ -318,7 +346,6 @@ footer .footer_settings .setting.setting_system{
     padding-right: 40px;
 }
 footer .footer_settings .setting.setting_system input{
-    /* margin-left: 30px; */
     transform: scale(4);
 }
 
@@ -333,16 +360,15 @@ footer .footer_settings .setting.setting_system input{
     margin-top: 10px;
 }
 
-.buttons_colors .btn-color {
+.buttons_colors .btn_color {
     border: none;
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    cursor: pointer;
     transition: var(--transitionCubic);
 }
 
-.buttons_colors .btn-color.active {
+.buttons_colors .btn_color.active {
     border: 5px solid white;
 }
 
@@ -367,6 +393,7 @@ footer .footer_settings .setting.setting_system input{
 }
 
 body.light-theme .divisor .divisor-fill{
+    transition-delay: 0s;
     fill: var(--secondary);
 }
 
@@ -383,6 +410,11 @@ body.light-theme .divisor .divisor-fill{
     background: var(--purplegd);
 }
 
+#body_elements-purplegd footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--purplegd);
+    background: var(--purplegd);
+}
+
 /*######### Azul #########*/
 #body_elements-bluegd .color_indicator {
     background-color: var(--blue);
@@ -392,6 +424,11 @@ body.light-theme .divisor .divisor-fill{
 
 #body_elements-bluegd footer .footer_nav .nav_btn:hover {
     background-color: var(--blue);
+    background: var(--bluegd);
+}
+
+#body_elements-bluegd footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--bluegd);
     background: var(--bluegd);
 }
 
@@ -407,6 +444,11 @@ body.light-theme .divisor .divisor-fill{
     background: var(--greengd);
 }
 
+#body_elements-greengd footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--greengd);
+    background: var(--greengd);
+}
+
 /*######### Amarillo #########*/
 #body_elements-yellowgd .color_indicator {
     background-color: var(--yellow);
@@ -416,6 +458,11 @@ body.light-theme .divisor .divisor-fill{
 
 #body_elements-yellowgd footer .footer_nav .nav_btn:hover {
     background-color: var(--yellow);
+    background: var(--yellowgd);
+}
+
+#body_elements-yellowgd footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--yellowgd);
     background: var(--yellowgd);
 }
 
@@ -431,6 +478,11 @@ body.light-theme .divisor .divisor-fill{
     background: var(--redgd);
 }
 
+#body_elements-redgd footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--redgd);
+    background: var(--redgd);
+}
+
 /*######### Arcoiris #########*/
 #body_elements-rainbow .color_indicator {
     background-color: var(--cyan);
@@ -440,6 +492,11 @@ body.light-theme .divisor .divisor-fill{
 
 #body_elements-rainbow footer .footer_nav .nav_btn:hover {
     background-color: var(--cyan);
+    background: var(--rainbow);
+}
+
+#body_elements-rainbow footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--rainbow);
     background: var(--rainbow);
 }
 
@@ -454,4 +511,10 @@ body.light-theme .divisor .divisor-fill{
     background-color: var(--cyan);
     background: var(--cyangd);
 }
+
+#body_elements-cyangd footer.menu_section.menu_open .footer_nav .btn_openmenu{
+    background-color: var(--cyangd);
+    background: var(--cyangd);
+}
+
 

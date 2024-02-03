@@ -443,7 +443,7 @@
                                 >Ver más <i class="fa-solid fa-circle-arrow-right"></i
                             ></a>
                         </p>
-                        <div class="card_info-img minusb-30 scale-1-2 r-35">
+                        <div class="card_info-img minusb-30 r-35_l">
                             <svg id="Video" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
                                 <g>
                                     <path
@@ -654,7 +654,7 @@
                 <div class="card p0 col-2_xl">
                     <article class="card_info">
                         <div class="card_info-title flex_group column">
-                            <h3>Mulyijugador</h3>
+                            <h3>Multijugador</h3>
                             <hr class="tittle" />
                         </div>
                         <p class="card_info-cont">
@@ -788,7 +788,7 @@
             <section class="footer_cont">
                 <h3 class="mb-10">Descripción</h3>
                 <p>
-                    Para demostrar mis habilidades eh creado esta página web desde cero, con el uso de html, css,
+                    Para demostrar mis habilidades eh creado esta app web desde cero, con el uso de html, css,
                     javascript y algunos frameworks basados en javascript o jQuery. Además de ello todos los proyectos
                     presentados fueron creado enteramente por mí con la ayuda de las opiniones de terceros, tanto
                     compañeros de la universidad, profesores/as y familiares.
@@ -802,14 +802,13 @@
                 </p>
             </section>
             <div class="footer_nav flex_group evenly">
-                <button class="nav_btn">
+                <button title="CV" class="nav_btn">
                     <span>
                         <i class="fa-solid fa-file-contract"></i>
                     </span>
                 </button>
-                <button class="nav_btn btn_openmenu">
-                </button>
-                <button class="nav_btn">
+                <button title="Configuración" class="nav_btn btn_openmenu"></button>
+                <button title="Comentarios" class="nav_btn">
                     <span>
                         <i class="fa-solid fa-comment-dots"></i>
                     </span>
@@ -822,32 +821,32 @@
                 <div class="setting">
                     <p>Cambiar Colores:</p>
                     <div class="buttons_colors">
-                        <button title="Purple" class="btn-color purple" data-color="body_elements-purplegd"></button>
-                        <button title="Blue" class="btn-color blue active" data-color="body_elements-bluegd"></button>
-                        <button title="Green" class="btn-color green" data-color="body_elements-greengd"></button>
-                        <button title="Yellow" class="btn-color yellow" data-color="body_elements-yellowgd"></button>
-                        <button title="Red" class="btn-color red" data-color="body_elements-redgd"></button>
-                        <button title="Rainbow" class="btn-color rainbow" data-color="body_elements-rainbow"></button>
-                        <button title="Cyan" class="btn-color cyangd" data-color="body_elements-cyangd"></button>
+                        <button title="Purple" class="btn_color purple" data-color="body_elements-purplegd"></button>
+                        <button title="Blue" class="btn_color blue active" data-color="body_elements-bluegd"></button>
+                        <button title="Green" class="btn_color green" data-color="body_elements-greengd"></button>
+                        <button title="Yellow" class="btn_color yellow" data-color="body_elements-yellowgd"></button>
+                        <button title="Red" class="btn_color red" data-color="body_elements-redgd"></button>
+                        <button title="Rainbow" class="btn_color rainbow" data-color="body_elements-rainbow"></button>
+                        <button title="Cyan" class="btn_color cyangd" data-color="body_elements-cyangd"></button>
                     </div>
                 </div>
                 <div class="setting setting_system flex_group between">
-                        <label for="systemTheme">
-                            Utilizar tema del sistema
-                        </label>
-                        <input type="checkbox" name="systemTheme" id="systemTheme">
+                    <label for="systemTheme"> Utilizar tema del sistema </label>
+                    <input type="checkbox" name="systemTheme" id="systemTheme" />
                 </div>
                 <div class="setting flex_group between">
                     <p class="switch_title">Tema: <span id="switch_text">Oscuro</span></p>
-                    <div class="switch">
+                    <button class="switch" title="switch theme">
                         <i class="fa-solid fa-sun"></i>
-                        <button class="switch_btn"></button>
+                        <div class="switch_btn"></div>
                         <i class="fa-solid fa-moon"></i>
-                    </div>
+                    </button>
                 </div>
                 <div class="setting flex_group between">
-                    <p>Cookies: <br class="display_l"/><span class="cookies_size"></span></p>
-                    <button class="btn_2 btn_click" id="deleteCookie">Eliminar <i class="fa-solid fa-trash-can"></i></button>
+                    <p>Cookies: <br class="display_l" /><span class="cookies_size"></span></p>
+                    <button class="btn_2 btn_click" id="deleteCookie">
+                        Eliminar <i class="fa-solid fa-trash-can"></i>
+                    </button>
                 </div>
             </section>
             <svg class="scale-0">
@@ -892,8 +891,8 @@
                     </linearGradient>
 
                     <linearGradient id="SVG_cyangd" x1="0" x2="500" y1="500" y2="0" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#17a2b8" />
-                        <stop offset="100%" stop-color="#072f43" />
+                        <stop offset="0" stop-color="#17a2b8" />
+                        <stop offset="1" stop-color="#072f43" />
                     </linearGradient>
                 </defs>
             </svg>
@@ -903,5 +902,8 @@
         <!-- <script src="JS/AOS-all.js"></script> -->
         <!-- <script src="JS/AOS.js"></script> -->
         <script src="JS/settings.js"></script>
+        <script src="JS/jquery-4pre.js"></script>
+        <script src="JS/jquery4pre.js"></script>
+        <script src="JS/sweetalert11.js"></script>
     </body>
 </html>

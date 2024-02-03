@@ -11,7 +11,7 @@ btn_toggle.addEventListener("click", function () {
 });
 
 // Cambio de colores #####################################
-const btncolors = document.querySelectorAll(".btn-color");
+const btncolors = document.querySelectorAll(".btn_color");
 
 btncolors.forEach((btnc1) => {
     btnc1.addEventListener("click", () => {
@@ -26,6 +26,28 @@ btncolors.forEach((btnc1) => {
         });
 
         btnc1.classList.add("active");
+
+        // const Toast = Swal.mixin({
+        //     toast: true,
+        //     position: 'top',
+        //     showConfirmButton: false,
+        //     showCloseButton: true,
+        //     timer: 2000,
+        //     timerProgressBar: true,
+        //       customClass: {
+        //         icon: 'icon_alert',
+        //         title: 'title_alert',
+        //         closeButton: 'close_button_alert',
+        //       },
+        //     didOpen: (toast) => {
+        //       toast.addEventListener('mouseenter', Swal.stopTimer);
+        //       toast.addEventListener('mouseleave', Swal.resumeTimer);
+        //     }
+        //   });
+        //   Toast.fire({
+        //     icon: "info",
+        //     title: "Se cambió el <strong>Color Distintivo</strong>"
+        //   });
     });
 });
 
@@ -41,24 +63,6 @@ if (colorGuardado) {
     activebtnColor.classList.add("active");
 }
 
-// Tarjetas ##########################################
-const cards = document.querySelectorAll(".card");
-
-cards.forEach((card) => {
-    card.addEventListener("click", () => {
-        if (card.classList.contains("active")) {
-            card.classList.remove("active");
-        } else {
-            cards.forEach((allcard) => {
-                allcard.classList.remove("active");
-            });
-            card.classList.add("active");
-            setTimeout(() => {
-                card.classList.remove("active");
-            }, 120000); // Dos minutos
-        }
-    });
-});
 
 // Obtener el tema del sistema
 var tema = window.matchMedia("(prefers-color-scheme: dark)");
@@ -88,7 +92,7 @@ function cambiarTema() {
             switch_text.innerText = "Claro";
         }
         // Deshabilitar el switch
-        switch_btn.setAttribute("disabled", true);
+        them_switch.setAttribute("disabled", true);
         them_switch.classList.add("object_disabled");
         switch_title.classList.add("object_disabled");
         // Guardar el estado del checkbox
@@ -112,7 +116,7 @@ function cambiarTema() {
             switch_text.innerText = "Oscuro";
         }
         // Habilitar el switch
-        switch_btn.removeAttribute("disabled");
+        them_switch.removeAttribute("disabled");
         them_switch.classList.remove("object_disabled");
         switch_title.classList.remove("object_disabled");
         // Guardar el estado del checkbox
@@ -123,7 +127,7 @@ function cambiarTema() {
 
 // Añadir los eventos al checkbox y al switch
 checkbox.addEventListener("change", cambiarTema);
-switch_btn.addEventListener("click", () => {
+them_switch.addEventListener("click", () => {
     // Cambiar el estado del switch
     them_switch.classList.toggle("active");
     // Llamar a la función cambiarTema
@@ -185,8 +189,31 @@ btnDelCookies.addEventListener("click", function () {
     location.reload();
 });
 
-
-
 document.oncontextmenu = function () {
     return false;
 };
+
+
+
+// Tarjetas ##########################################
+// const cards = document.querySelectorAll(".card");
+
+// cards.forEach((card) => {
+//     card.addEventListener("click", () => {
+//         if (card.classList.contains("active")) {
+//             card.classList.remove("active");
+//         } else {
+//             cards.forEach((allcard) => {
+//                 allcard.classList.remove("active");
+//             });
+//             card.classList.add("active");
+//             setTimeout(() => {
+//                 card.classList.remove("active");
+//             }, 120000);
+//         }
+//     });
+// });
+
+
+
+
